@@ -1,0 +1,22 @@
+Path,File Name,Format,DNA/RNA,What's in there?
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_clean_nanopore.fq.gz,compressed version of a fastq,DNA,long reads
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_clean_nanopore.hist, OptiStruct ASCII format results file,DNA,long reads
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_clean_nanopore.ktab,keytab file,DNA,long reads
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_hiC_R1.fastq.gz,fastq,DNA,short reads (Hi-C)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_hiC_R2.fastq.gz,fastq,DNA,short reads (Hi-C)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_illumina_R1.fastq.gz,fastq,DNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,chr3_illumina_R2.fastq.gz,fastq,DNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_1_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_1_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_2_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_2_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_3_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Control_3_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,CRR809859_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,CRR809859_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_1_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_1_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_2_f1.fq.gz                                                                                           ,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_2_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_3_f1.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
+/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads,Heat_treated_42_12h_3_r2.fq.gz,compressed version of a fastq,RNA,short reads (Illumina)
