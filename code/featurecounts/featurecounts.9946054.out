@@ -1,0 +1,86 @@
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 6 BAM files                                      ||
+||                                                                            ||
+||                           control_1.sorted.bam                             ||
+||                           control_2.sorted.bam                             ||
+||                           control_3.sorted.bam                             ||
+||                           heat_treated_1.sorted.bam                        ||
+||                           heat_treated_2.sorted.bam                        ||
+||                           heat_treated_3.sorted.bam                        ||
+||                                                                            ||
+||             Output file : counts.txt                                       ||
+||                 Summary : counts.txt.summary                               ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : yes                                              ||
+||              Annotation : braker_changedIDs.gtf (GTF)                      ||
+||      Dir for temp files : /home/bianc/genomeanalysis/results/featureco ... ||
+||                                                                            ||
+||                 Threads : 6                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file braker_changedIDs.gtf ...                             ||
+||    Features : 21483                                                        ||
+||    Meta-features : 3701                                                    ||
+||    Chromosomes/contigs : 32                                                ||
+||                                                                            ||
+|| Process BAM file control_1.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 21961175                                             ||
+||    Successfully assigned alignments : 1526159 (6.9%)                       ||
+||    Running time : 0.21 minutes                                             ||
+||                                                                            ||
+|| Process BAM file control_2.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 22181421                                             ||
+||    Successfully assigned alignments : 1310904 (5.9%)                       ||
+||    Running time : 0.22 minutes                                             ||
+||                                                                            ||
+|| Process BAM file control_3.sorted.bam...                                   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 23164222                                             ||
+||    Successfully assigned alignments : 1386447 (6.0%)                       ||
+||    Running time : 0.21 minutes                                             ||
+||                                                                            ||
+|| Process BAM file heat_treated_1.sorted.bam...                              ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 22530283                                             ||
+||    Successfully assigned alignments : 1382669 (6.1%)                       ||
+||    Running time : 0.20 minutes                                             ||
+||                                                                            ||
+|| Process BAM file heat_treated_2.sorted.bam...                              ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 21868014                                             ||
+||    Successfully assigned alignments : 1370785 (6.3%)                       ||
+||    Running time : 0.19 minutes                                             ||
+||                                                                            ||
+|| Process BAM file heat_treated_3.sorted.bam...                              ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 22455913                                             ||
+||    Successfully assigned alignments : 1417064 (6.3%)                       ||
+||    Running time : 0.19 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/home/bianc/genomeanaly  ||
+|| sis/results/featurecounts/counts.txt.summary"                              ||
+||                                                                            ||
+\\============================================================================//
+

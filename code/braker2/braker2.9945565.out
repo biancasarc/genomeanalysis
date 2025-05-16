@@ -1,0 +1,37 @@
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.68-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.68-es'
+GeneMark/4.68-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.68-es'
+diamond_databases/latest: for a list of prebuilt databases for diamond, see 'module help diamond_databases/latest'
+braker/2.1.6 : GeneMark and augustus may require some setup; see 'module help braker/2.1.6'
+augustus/3.5.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.5.0'
+GeneMark/4.68-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.68-es'
+/var/spool/slurmd/job9945565/slurm_script: line 16: Export: command not found
+#**********************************************************************************
+#                               BRAKER CONFIGURATION                               
+#**********************************************************************************
+# BRAKER CALL: /sw/bioinfo/braker/2.1.6/snowy/scripts/braker.pl --etpmode --cores=8 --AUGUSTUS_CONFIG_PATH=/home/bianc/genomeanalysis/augustus_config --AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin --AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts --GENEMARK_PATH=/sw/bioinfo/GeneMark/4.68-es/snowy --genome=/home/bianc/genomeanalysis/results/repeatmasker/yahs.out_scaffolds_final.fa.masked --bam=/proj/uppmax2025-3-3/nobackup/work/bianca/hisat2/control_1.sorted.bam,/proj/uppmax2025-3-3/nobackup/work/bianca/hisat2/control_ 2.sorted.bam,/proj/uppmax2025-3-3/nobackup/work/bianca/hisat2/control_3.sorted.bam  
+# Fri May  9 09:22:57 2025: braker.pl version 2.1.6
+# Fri May  9 09:22:57 2025: Configuring of BRAKER for using external tools...
+# Fri May  9 09:22:57 2025: Command line flag --AUGUSTUS_CONFIG_PATH was provided. Setting $AUGUSTUS_CONFIG_PATH in braker.pl to /home/bianc/genomeanalysis/augustus_config.
+# Fri May  9 09:22:57 2025: Setting $AUGUSTUS_BIN_PATH to command line argument --AUGUSTUS_BIN_PATH value /sw/bioinfo/augustus/3.4.0/snowy/bin.
+# Fri May  9 09:22:57 2025: Setting $AUGUSTUS_SCRIPTS_PATH to command line argument --AUGUSTUS_SCRIPTS_PATH value /sw/bioinfo/augustus/3.4.0/snowy/scripts.
+# Fri May  9 09:22:57 2025: Did not find environment variable $PYTHON3_PATH
+# Fri May  9 09:22:57 2025: Trying to guess $PYTHON3_PATH from location of python3 executable that is available in your $PATH
+# Fri May  9 09:22:57 2025: Setting $PYTHON3_PATH to /sw/comp/python/3.9.5/snowy/bin
+# Fri May  9 09:22:57 2025: Setting $GENEMARK_PATH to command line argument --GENEMARK_PATH value /sw/bioinfo/GeneMark/4.68-es/snowy.
+# Fri May  9 09:22:57 2025: Did not find environment variable $BAMTOOLS_PATH (either variable does not exist, or the path given in variable does not exist). Will try to set this variable in a different way, later.
+# Fri May  9 09:22:57 2025: Trying to guess $BAMTOOLS_BIN_PATH from location of bamtools executable that is available in your $PATH
+# Fri May  9 09:22:57 2025: Setting $BAMTOOLS_BIN_PATH to /sw/bioinfo/bamtools/2.5.1/snowy/bin
+# Fri May  9 09:22:57 2025: Did not find environment variable $SAMTOOLS_PATH  (either variable does not exist, or the path given in variable doesnot exist). Will try to set this variable in a different way, later.
+# Fri May  9 09:22:57 2025: Trying to guess $SAMTOOLS_PATH from location of samtools executable in your $PATH
+# Fri May  9 09:22:57 2025: Setting $SAMTOOLS_PATH to /sw/bioinfo/samtools/1.12/snowy/bin
+# Fri May  9 09:22:57 2025: Did not find environment variable $DIAMOND_PATH
+# Fri May  9 09:22:57 2025: Trying to guess $DIAMOND_PATH from location of diamond executable that is available in your $PATH
+# Fri May  9 09:22:57 2025: Setting $DIAMOND_PATH to /sw/bioinfo/diamond/0.9.31/snowy/bin
+# Fri May  9 09:22:57 2025: Did not find environment variable $CDBTOOLS_PATH
+# Fri May  9 09:22:57 2025: Trying to guess $CDBTOOLS_PATH from location of cdbfasta executable that is available in your $PATH
+# Fri May  9 09:22:57 2025: Setting $CDBTOOLS_PATH to /sw/bioinfo/cdbfasta/1.00/snowy/bin
+# Fri May  9 09:22:57 2025: ERROR: in file /sw/bioinfo/braker/2.1.6/snowy/scripts/braker.pl at line 4461
+BAM file /proj/uppmax2025-3-3/nobackup/work/bianca/hisat2/control_ does not exist.
+/var/spool/slurmd/job9945565/slurm_script: line 39: --prot_seq=/proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/embryophyte_proteomes.faa: No such file or directory
