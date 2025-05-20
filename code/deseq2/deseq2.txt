@@ -1,0 +1,45 @@
+library(BiocManager)
+library("DESeq2")
+
+#Creating cts
+cts<-cts_original[c(7,8,9,10,11,12)]
+names(cts)<-c("control_1","control_2","control_3","heat_treated_1","heat_treated_2","heat_treated_3")
+rownames(cts)<-cts_original$Geneid
+cts <-cts[rowSums(cts[])>0,] #deleting all completely null rows
+
+#Creating colnames
+coldata<- data.frame(
+  condition=c("control","control","control","heat_treated","heat_treated","heat_treated"),
+  type=c("pair-end","pair-end","pair-end","pair-end","pair-end","pair-end")
+)
+rownames(coldata)<-colnames(cts)
+
+all(rownames(coldata) == colnames(cts))  # should return TRUE
+
+
+dds <- DESeqDataSetFromMatrix(countData = cts,
+                              colData = coldata,
+                              design= ~condition)
+dds <- DESeq(dds)
+resultsNames(dds) # lists the coefficients
+res <- results(dds)
+dds$condition <- relevel(dds$condition, ref = "control")
+
+#This filters, so we only get the significant genes
+resSig <- res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+resOrdered <- res[order(res$padj), ]
+head(resOrdered)
+plotMA(res, ylim = c(-5, 5))
+plotCounts(dds, gene = "GENE_ID", intgroup = "condition")
+
+# Remove rows with NA padj
+res_clean <- res[!is.na(res$padj), ]
+
+# Sort by adjusted p-value
+res_sorted <- res_clean[order(res_clean$padj), ]
+
+# Extract top 20
+top40 <- head(res_sorted, 40)
+
+# View 
+print(top40@rownames)
