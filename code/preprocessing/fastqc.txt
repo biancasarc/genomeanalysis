@@ -1,0 +1,5 @@
+module load bioinfo-tools FastQC/0.11.9
+
+fastqc /home/bianc/genomeanalysis/data/raw_data/chr3_illumina_R1.fastq.gz -o /home/bianc/genomeanalysis/analyses/preprocessing/
+
+fastqc /home/bianc/genomeanalysis/data/raw_data/chr3_illumina_R2.fastq.gz -o /home/bianc/genomeanalysis/analyses/preprocessing/
