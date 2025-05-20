@@ -1,0 +1,61 @@
+/sw/bioinfo/quast/5.0.2/snowy/bin/quast.py -t 2 yahs.out_scaffolds_final.fa
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.119.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2025-04-28 15:56:25
+
+Logging to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/quast.log
+
+CWD: /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs
+Main parameters: 
+  MODE: default, threads: 2, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  yahs.out_scaffolds_final.fa ==> yahs.out_scaffolds_final
+
+2025-04-28 15:56:27
+Running Basic statistics processor...
+  Contig files: 
+    yahs.out_scaffolds_final
+  Calculating N50 and L50...
+    yahs.out_scaffolds_final, N50 = 15942740, L50 = 1, Total length = 16964980, GC % = 41.92, # N's per 100 kbp =  7.07
+  Drawing Nx plot...
+    saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/basic_stats/GC_content_plot.pdf
+  Drawing yahs.out_scaffolds_final GC content plot...
+    saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/basic_stats/yahs.out_scaffolds_final_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2025-04-28 15:56:29
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2025-04-28 15:56:30
+RESULTS:
+  Text versions of total report are saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/report.html
+  PDF version (tables and plots) is saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/report.pdf
+  Icarus (contig browser) is saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/icarus.html
+  Log is saved to /domus/h1/bianc/genomeanalysis/results/scaffolding/yahs/quast_results/results_2025_04_28_15_56_25/quast.log
+
+Finished: 2025-04-28 15:56:30
+Elapsed time: 0:00:04.953884
+NOTICEs: 1; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

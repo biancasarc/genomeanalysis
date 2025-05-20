@@ -1,0 +1,134 @@
+[I::main] dump hic links (BAM) to binary file yahs.out.bin
+[I::dump_links_from_bam_file] 1 million records processed, 499931 read pairs 
+[I::dump_links_from_bam_file] 2 million records processed, 1000209 read pairs 
+[I::dump_links_from_bam_file] 3 million records processed, 1500066 read pairs 
+[I::dump_links_from_bam_file] 4 million records processed, 1999941 read pairs 
+[I::dump_links_from_bam_file] 5 million records processed, 2500628 read pairs 
+[I::dump_links_from_bam_file] 6 million records processed, 3000180 read pairs 
+[I::dump_links_from_bam_file] 7 million records processed, 3499915 read pairs 
+[I::dump_links_from_bam_file] 8 million records processed, 4000115 read pairs 
+[I::dump_links_from_bam_file] 9 million records processed, 4500383 read pairs 
+[I::dump_links_from_bam_file] 10 million records processed, 4999882 read pairs 
+[I::dump_links_from_bam_file] 11 million records processed, 5500327 read pairs 
+[I::dump_links_from_bam_file] 12 million records processed, 6000332 read pairs 
+[I::dump_links_from_bam_file] 13 million records processed, 6500303 read pairs 
+[I::dump_links_from_bam_file] 14 million records processed, 7000154 read pairs 
+[I::dump_links_from_bam_file] 15 million records processed, 7500504 read pairs 
+[I::dump_links_from_bam_file] 16 million records processed, 8000637 read pairs 
+[I::dump_links_from_bam_file] 17 million records processed, 8500855 read pairs 
+[I::dump_links_from_bam_file] 18 million records processed, 9000901 read pairs 
+[I::dump_links_from_bam_file] 19 million records processed, 9500575 read pairs 
+[I::dump_links_from_bam_file] 20 million records processed, 10000715 read pairs 
+[I::dump_links_from_bam_file] 21 million records processed, 10500537 read pairs 
+[I::dump_links_from_bam_file] 22 million records processed, 11000555 read pairs 
+[I::dump_links_from_bam_file] 23 million records processed, 11500323 read pairs 
+[I::dump_links_from_bam_file] 24 million records processed, 12000575 read pairs 
+[I::dump_links_from_bam_file] 25 million records processed, 12500775 read pairs 
+[I::dump_links_from_bam_file] 26 million records processed, 13000611 read pairs 
+[I::dump_links_from_bam_file] 27 million records processed, 13500655 read pairs 
+[I::dump_links_from_bam_file] 28 million records processed, 14000724 read pairs 
+[I::dump_links_from_bam_file] 29 million records processed, 14500703 read pairs 
+[I::dump_links_from_bam_file] 30 million records processed, 15000829 read pairs 
+[I::dump_links_from_bam_file] 31 million records processed, 15500721 read pairs 
+[I::dump_links_from_bam_file] 32 million records processed, 16000832 read pairs 
+[I::dump_links_from_bam_file] 33 million records processed, 16500724 read pairs 
+[I::dump_links_from_bam_file] 34 million records processed, 17000339 read pairs 
+[I::dump_links_from_bam_file] 35 million records processed, 17500330 read pairs 
+[I::dump_links_from_bam_file] 36 million records processed, 18000225 read pairs 
+[I::dump_links_from_bam_file] 37 million records processed, 18500030 read pairs 
+[I::dump_links_from_bam_file] 38 million records processed, 19000366 read pairs 
+[I::dump_links_from_bam_file] 39 million records processed, 19500536 read pairs 
+[I::dump_links_from_bam_file] position compression n = 78879316, m = 11253436, max_m = 134217727
+[I::dump_links_from_bam_file] dumped 19719827 read pairs from 39439658 records: 18073186 intra links + 1646641 inter links 
+[I::calc_avg_cov] sequence coverage stats:
+[I::calc_avg_cov] sequence bases: 16963780
+[I::calc_avg_cov] read bases: 4502096137
+[I::calc_avg_cov] q drop: 0.100
+[I::calc_avg_cov] average read coverage: 229.478
+[I::run_yahs] RAM total: 125.713GB
+[I::run_yahs] RAM limit: 15.625GB
+[I::contig_error_break] dist threshold for contig error break: 1000000
+[I::contig_error_break] performed 2 round assembly error correction. Made 5 breaks 
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 2073016 (n = 3)
+[I::print_asm_stats]  N90: 367527 (n = 9)
+[I::print_asm_stats]  N100: 642 (n = 53)
+[I::run_yahs] scaffolding round 1 resolution = 10000
+[I::run_scaffolding] starting norm estimation...
+[I::run_scaffolding] starting link estimation...
+[I::inter_link_norms] using noise level 0.301
+[I::inter_link_norms] using new radius 48 (100) as noise ratio exceeds threshold 0.100
+[I::inter_link_norms] average link count: 5267.891 59768.000 0.088
+[I::run_scaffolding] starting scaffolding graph contruction...
+[I::run_yahs] scaffolding round 1 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 3181253 (n = 2)
+[I::print_asm_stats]  N90: 742336 (n = 6)
+[I::run_yahs] scaffolding round 2 resolution = 20000
+[I::run_scaffolding] starting norm estimation...
+[I::run_scaffolding] starting link estimation...
+[I::inter_link_norms] using noise level 1.101
+[I::inter_link_norms] using new radius 29 (100) as noise ratio exceeds threshold 0.100
+[I::inter_link_norms] average link count: 1193.733 7694.000 0.155
+[I::run_scaffolding] starting scaffolding graph contruction...
+[I::run_yahs] scaffolding round 2 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 14966648 (n = 1)
+[I::print_asm_stats]  N90: 974892 (n = 2)
+[I::run_yahs] scaffolding round 3 resolution = 50000
+[I::run_scaffolding] starting norm estimation...
+[I::run_scaffolding] starting link estimation...
+[I::inter_link_norms] using noise level 7.286
+[I::inter_link_norms] using new radius 12 (100) as noise ratio exceeds threshold 0.100
+[I::inter_link_norms] average link count: 28.767 108.000 0.266
+[I::run_scaffolding] starting scaffolding graph contruction...
+[I::run_yahs] scaffolding round 3 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::run_yahs] scaffolding round 4 resolution = 100000
+[I::run_scaffolding] starting norm estimation...
+[I::run_scaffolding] starting link estimation...
+[I::inter_link_norms] using noise level 0.000
+[I::inter_link_norms] average link count: 0.000 0.000 0.000
+[I::run_scaffolding] starting scaffolding graph contruction...
+[I::run_yahs] scaffolding round 4 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::run_yahs] scaffolding round 5 resolution = 200000
+[I::run_scaffolding] starting norm estimation...
+[I::run_scaffolding] starting link estimation...
+[I::inter_link_norms] using noise level 0.000
+[I::inter_link_norms] average link count: 0.000 0.000 0.000
+[I::run_scaffolding] starting scaffolding graph contruction...
+[I::run_yahs] scaffolding round 5 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::run_yahs] scaffolding round 6 resolution = 500000
+[I::run_scaffolding] starting norm estimation...
+[E::calc_norms] no enough bands (2) for norm calculation, try a higher resolution
+[W::run_scaffolding] No enough bands for norm calculation... End of scaffolding round.
+[I::run_yahs] scaffolding round 6 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::run_yahs] scaffolding round 7 resolution = 1000000
+[I::run_scaffolding] starting norm estimation...
+[E::calc_norms] no enough bands (0) for norm calculation, try a higher resolution
+[W::run_scaffolding] No enough bands for norm calculation... End of scaffolding round.
+[I::run_yahs] scaffolding round 7 done
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::main] writing FASTA file for scaffolds
+[I::write_fasta_file_from_agp] Number sequences: 41
+[I::write_fasta_file_from_agp] Number bases: 16964980
+[I::print_asm_stats] assembly stats:
+[I::print_asm_stats]  N50: 15941540 (n = 1)
+[I::print_asm_stats]  N90: 15941540 (n = 1)
+[I::print_asm_stats]  N100: 642 (n = 41)
+[I::main] Version: 1.2.2
+[I::main] CMD: /proj/uppmax2025-3-3/Genome_Analysis/yahs/yahs /home/bianc/genomeanalysis/results/polishing/pilon.fasta /home/bianc/genomeanalysis/results/scaffolding/duplicate_marking/duplicate_marked.bam
+[I::main] Real time: 126.884 sec; CPU: 125.825 sec; Peak RSS: 0.681 GB

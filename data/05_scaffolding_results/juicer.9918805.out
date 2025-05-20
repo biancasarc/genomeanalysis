@@ -1,0 +1,47 @@
+[I::main_pre] make juicer pre input from BIN file yahs.out.bin
+[I::make_juicer_pre_file_from_bin] 19719827 read pairs processed: 0 unmapped
+[I::main_pre] chromosome sizes for juicer_tools pre -
+PRE_C_SIZE: scaffold_1 15942740
+PRE_C_SIZE: scaffold_2 104979
+PRE_C_SIZE: scaffold_3 100928
+PRE_C_SIZE: scaffold_4 76545
+PRE_C_SIZE: scaffold_5 64808
+PRE_C_SIZE: scaffold_6 54472
+PRE_C_SIZE: scaffold_7 53518
+PRE_C_SIZE: scaffold_8 38292
+PRE_C_SIZE: scaffold_9 37324
+PRE_C_SIZE: scaffold_10 35474
+PRE_C_SIZE: scaffold_11 35338
+PRE_C_SIZE: scaffold_12 35200
+PRE_C_SIZE: scaffold_13 30309
+PRE_C_SIZE: scaffold_14 27068
+PRE_C_SIZE: scaffold_15 25974
+PRE_C_SIZE: scaffold_16 22156
+PRE_C_SIZE: scaffold_17 21656
+PRE_C_SIZE: scaffold_18 20240
+PRE_C_SIZE: scaffold_19 18288
+PRE_C_SIZE: scaffold_20 18224
+PRE_C_SIZE: scaffold_21 18139
+PRE_C_SIZE: scaffold_22 17701
+PRE_C_SIZE: scaffold_23 17512
+PRE_C_SIZE: scaffold_24 16669
+PRE_C_SIZE: scaffold_25 16266
+PRE_C_SIZE: scaffold_26 14461
+PRE_C_SIZE: scaffold_27 13540
+PRE_C_SIZE: scaffold_28 13092
+PRE_C_SIZE: scaffold_29 10036
+PRE_C_SIZE: scaffold_30 9709
+PRE_C_SIZE: scaffold_31 9000
+PRE_C_SIZE: scaffold_32 9000
+PRE_C_SIZE: scaffold_33 8977
+PRE_C_SIZE: scaffold_34 8895
+PRE_C_SIZE: scaffold_35 3701
+PRE_C_SIZE: scaffold_36 3137
+PRE_C_SIZE: scaffold_37 3047
+PRE_C_SIZE: scaffold_38 3000
+PRE_C_SIZE: scaffold_39 2530
+PRE_C_SIZE: scaffold_40 2393
+PRE_C_SIZE: scaffold_41 642
+[I::main_pre] Version: 1.2.2
+[I::main_pre] CMD: juicer pre yahs.out.bin yahs.out_scaffolds_final.agp /home/bianc/genomeanalysis/results/polishing/pilon.fasta.fai
+[I::main_pre] Real time: 16.906 sec; CPU: 7.341 sec; Peak RSS: 0.001 GB

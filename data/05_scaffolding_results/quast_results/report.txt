@@ -1,0 +1,24 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    yahs.out_scaffolds_final
+# contigs (>= 0 bp)         41                      
+# contigs (>= 1000 bp)      40                      
+# contigs (>= 5000 bp)      34                      
+# contigs (>= 10000 bp)     29                      
+# contigs (>= 25000 bp)     15                      
+# contigs (>= 50000 bp)     7                       
+Total length (>= 0 bp)      16964980                
+Total length (>= 1000 bp)   16964338                
+Total length (>= 5000 bp)   16946530                
+Total length (>= 10000 bp)  16900949                
+Total length (>= 25000 bp)  16662969                
+Total length (>= 50000 bp)  16397990                
+# contigs                   41                      
+Largest contig              15942740                
+Total length                16964980                
+GC (%)                      41.92                   
+N50                         15942740                
+N75                         15942740                
+L50                         1                       
+L75                         1                       
+# N's per 100 kbp           7.07                    
