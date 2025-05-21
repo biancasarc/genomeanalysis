@@ -2,44 +2,124 @@ library(BiocManager)
 library("DESeq2")
 
 #Creating cts
-cts<-cts_original[c(7,8,9,10,11,12)]
-names(cts)<-c("control_1","control_2","control_3","heat_treated_1","heat_treated_2","heat_treated_3")
-rownames(cts)<-cts_original$Geneid
-cts <-cts[rowSums(cts[])>0,] #deleting all completely null rows
+cts <- cts_original[c(7,8,9,10,11,12)]
+names(cts) <- c("control_1","control_2","control_3","heat_treated_1","heat_treated_2","heat_treated_3")
+rownames(cts) <- cts_original$Geneid
+cts <- cts[rowSums(cts) > 0, ] #deleting all completely null rows
 
 #Creating colnames
-coldata<- data.frame(
-  condition=c("control","control","control","heat_treated","heat_treated","heat_treated"),
-  type=c("pair-end","pair-end","pair-end","pair-end","pair-end","pair-end")
+coldata <- data.frame(
+  condition = c("control","control","control","heat_treated","heat_treated","heat_treated"),
+  type = c("pair-end","pair-end","pair-end","pair-end","pair-end","pair-end")
 )
-rownames(coldata)<-colnames(cts)
+rownames(coldata) <- colnames(cts)
 
 all(rownames(coldata) == colnames(cts))  # should return TRUE
 
-
+#DESeq2 analysis
 dds <- DESeqDataSetFromMatrix(countData = cts,
                               colData = coldata,
-                              design= ~condition)
+                              design = ~condition)
+dds$condition <- relevel(dds$condition, ref = "control")
 dds <- DESeq(dds)
 resultsNames(dds) # lists the coefficients
 res <- results(dds)
-dds$condition <- relevel(dds$condition, ref = "control")
 
 #This filters, so we only get the significant genes
+res <- res[!is.na(res$padj), ]  # Remove rows with NA padj
 resSig <- res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
 resOrdered <- res[order(res$padj), ]
 head(resOrdered)
+
+#Plotting
 plotMA(res, ylim = c(-5, 5))
-plotCounts(dds, gene = "GENE_ID", intgroup = "condition")
+#plotCounts(dds, gene = "GENE_ID", intgroup = "condition")  # Can be uncommented for specific genes
 
-# Remove rows with NA padj
-res_clean <- res[!is.na(res$padj), ]
+# Extract top 40 based on significance
+res_df <- as.data.frame(resOrdered)
+res_df$gene <- rownames(res_df)
+top40 <- head(res_df, 40)
+print(top40$gene)
 
-# Sort by adjusted p-value
-res_sorted <- res_clean[order(res_clean$padj), ]
+# Get normalized counts
+normalized_counts <- counts(dds, normalized=TRUE)
+top40_counts <- normalized_counts[top40$gene, ]
 
-# Extract top 20
-top40 <- head(res_sorted, 40)
+top40_table <- as.data.frame(top40_counts)
+top40_table$gene <- rownames(top40_table)
 
-# View 
-print(top40@rownames)
+#reorder columns to have gene names first
+top40_table <- top40_table[, c("gene", colnames(top40_counts))]
+
+#Renaming annotation columns
+colnames(top40_annotations) <- c(
+  "name_in_augustus", "query"," ", "seed_ortholog", "evalue", "score", "eggNOG_OGs", 
+  "max_annot_lvl", "COG_category", "Description", "Preferred_name", "GOs", "EC", 
+  "KEGG_ko", "KEGG_Pathway", "KEGG_Module", "KEGG_Reaction", "KEGG_rclass", 
+  "BRITE", "KEGG_TC", "CAZy", "BiGG_Reaction", "PFAMs"
+)
+
+#removing the empty column
+top40_annotations <- top40_annotations[, !colnames(top40_annotations) %in% " "]
+
+
+normalized_counts <- counts(dds, normalized = TRUE)
+
+avg_control <- rowMeans(normalized_counts[, c("control_1", "control_2", "control_3")])
+avg_heat <- rowMeans(normalized_counts[, c("heat_treated_1", "heat_treated_2", "heat_treated_3")])
+
+
+avg_expr_df <- data.frame(
+  gene = rownames(normalized_counts),
+  avg_control_expr = avg_control,
+  avg_heat_expr = avg_heat
+)
+
+#Add regulation direction and escore
+top40$regulation <- ifelse(top40$log2FoldChange > 0, "up", "down")
+top40$escore <- abs(top40$log2FoldChange)
+
+
+top40_expr <- merge(top40, avg_expr_df, by = "gene")
+
+#annotation table
+colnames(top40_annotations) <- c(
+  "name_in_augustus", "query", "drop_this", "seed_ortholog", "evalue", "score", "eggNOG_OGs", 
+  "max_annot_lvl", "COG_category", "Description", "Preferred_name", "GOs", "EC", 
+  "KEGG_ko", "KEGG_Pathway", "KEGG_Module", "KEGG_Reaction", "KEGG_rclass", 
+  "BRITE", "KEGG_TC", "CAZy", "BiGG_Reaction", "PFAMs"
+)
+
+top40_annotations <- top40_annotations[, !colnames(top40_annotations) %in% "drop_this"]
+
+#merge top40 expression+DE with annotations
+final_merged <- merge(
+  top40_expr,
+  top40_annotations,
+  by.x = "gene",
+  by.y = "name_in_augustus"
+)
+
+final_table <- final_merged[, c(
+  "eggNOG_OGs",
+  "Description",
+  "Preferred_name",
+  "avg_control_expr",
+  "avg_heat_expr",
+  "regulation",
+  "log2FoldChange","escore","padj")]
+
+
+
+write.csv(final_table, "top40_summary_table.csv", row.names = FALSE)
+
+#top_40_table was analysed outside of R, and only the best genes were kept. Afterwards it was reimported under the name Final_10_annotated_and_statistics
+
+#plot
+ggplot(Final_10_annotated_and_statistics, aes(x = reorder(eggNOG_OGs, log2FoldChange), y = log2FoldChange, fill = regulation)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Top 10 Upregulated and Downregulated Genes",
+       x = "Gene", y = "log2 Fold Change", fill = "Regulation") +  # Label for legend
+  scale_fill_manual(values = c("up" = "tomato", "down" = "steelblue"))
