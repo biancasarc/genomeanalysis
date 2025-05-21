@@ -1,0 +1,11 @@
+﻿eggNOG_OGs,Description,Preferred_name,avg_control_expr,avg_heat_expr,regulation,log2FoldChange,escore,padj
+28NEG,stay-green,SGR1,10.93593104,205.9049865,up,4.245547603,4.245547603,1.71E-09
+2E6DZ,-,-,1201.24257,61.40820163,down,-4.287352653,4.287352653,1.57E-11
+COG1131,ABC transporter A family member,-,561.3761458,5.87493771,down,-6.51635294,6.51635294,1.81E-11
+COG0666,response to abiotic stimulus,-,733.1616455,23.27304054,down,-4.963864078,4.963864078,2.92E-09
+COG0464,"cell division. post-translational modification, protein turnover, and chaperones",-,3.662175327,87.25358013,up,4.554082709,4.554082709,3.05E-08
+2CNS9,-,-,1.626322388,67.30923294,up,5.40493035,5.40493035,5.25E-08
+28KH1,WRKY Transcription Factor,WRKY,359.5094352,3.52113593,down,-6.585879822,6.585879822,3.71E-11
+29TJ0,Remorin-like,-,262.6912703,13.51241901,down,-4.248255124,4.248255124,3.84E-11
+COG0443,Belongs to the heat shock protein 70 family,-,1961.82521,39584.65366,up,4.334674855,4.334674855,1.18E-13
+28MUW,Methyltransferase FkbM domain,-,2.473093713,102.8850227,up,5.370978166,5.370978166,1.63E-09
