@@ -1,0 +1,3 @@
+module load bioinfo-tools BUSCO/5.7.1
+
+busco -i /home/bianc/genomeanalysis/results/dna_assembly/assembly.fasta -m genome -l $BUSCO_LINEAGE_SETS/embryophyta_odb10 -c 4

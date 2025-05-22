@@ -1,0 +1,2 @@
+module load quast/5.0.2
+quast.py -t 2 /home/bianc/genomeanalysis/results/dna_assembly/assembly.fasta

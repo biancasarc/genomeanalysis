@@ -1,0 +1,3 @@
+module load samtools
+
+samtools collate -@ 4 -O -u cd/proj/uppmax2025-3-3/nobackup/work/bianca/hic_mapping/chr3_hic_mapped.sorted.bam | samtools fixmate -@ 4 -m -u - - | samtools sort -@ 4 -u - | samtools markdup -@ 4 - duplicate_marked.bam
