@@ -1,0 +1,12 @@
+Processing control_1.sorted.bam
+control_1.sorted.bam Average coverage =  100.396
+Processing control_2.sorted.bam
+control_2.sorted.bam Average coverage =  86.2084
+Processing control_3.sorted.bam
+control_3.sorted.bam Average coverage =  93.5796
+Processing heat_treated_1.sorted.bam
+heat_treated_1.sorted.bam Average coverage =  93.8417
+Processing heat_treated_2.sorted.bam
+heat_treated_2.sorted.bam Average coverage =  89.7358
+Processing heat_treated_3.sorted.bam
+heat_treated_3.sorted.bam Average coverage =  87.4984

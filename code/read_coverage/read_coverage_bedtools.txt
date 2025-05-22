@@ -1,0 +1,6 @@
+for bam in *.bam; do
+  echo "Processing $bam"
+  bedtools genomecov -ibam "$bam" -d \
+    | awk '{ total += $3; count++ } END { print "'$bam' Average coverage = ", total/count }'
+done
+
