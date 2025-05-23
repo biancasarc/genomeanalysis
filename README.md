@@ -2,15 +2,15 @@
 ## First things first: Data Organization  
 All data is organized into three main directories:  
 
-- **`Code/`**  
+- **`code/`**  
   Contains all scripts/code for each tool and process.  
 
-- **`Data/`**  
+- **`data/`**  
   Stores outcomes, statistics, and plots in formats like `.html`, `.txt`, `.csv`, and `.pdf`.  
 
-- **`Images/`**  
+- **`images/`**  
   Exclusively for plots in `.png` format (GitHub wiki-friendly).  
-  - *Note*: R-generated plots are saved here, while other plots (e.g., `.pdf`) are also available in `Data/`.  
+  - *Note*: R-generated plots are found only here, while other plots (for example `.pdf`) are also available in `Data/`.  
 
 ---
 
