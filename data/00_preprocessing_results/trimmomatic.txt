@@ -1,0 +1,2 @@
+Input Read Pairs: 20979851 Both Surviving: 20250146 (96.52%) Forward Only Surviving: 399035 (1.90%) Reverse Only Surviving: 258525 (1.23%) Dropped: 72145 (0.34%)
+
